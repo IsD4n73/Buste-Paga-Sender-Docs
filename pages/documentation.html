@@ -59,6 +59,9 @@
             </ul>
             
           <li><a href="#main"><b>Main</a></b>
+            <ul>
+              <li><a href="#creacartella">Crea Cartella</a></li>
+            </ul>
 
           <li><a href="#gui"><b>GUI</a></b>
             
@@ -107,12 +110,16 @@
   <h3 id="getNominativo">getNominativo</h3>
   <img src="/Buste-Paga-Sender-Docs/Screen/getnome.png">
   <p>
-
-
+    Prende come parametro il nome di un file e lo spezza ad ogni <b>-</b> <br>Il formato del nome è:
+    <blockquote>
+      1 - Gennaio 2022 - Nome e Cognome.pdf
+    </blockquote>
+    Il nominativo è il 2 elemento, toglie il .pdf dal nome, elimina gli spazi in eccesso, imposta tutte le lettere iniziali del nome in maiuscolo, se trova qualche carattere speciale lo sostituisce.<br>
+    Avvisa in console il nome finale e lo ritorna.
 
   <br><br>
   <mark>Paramentri:</mark> nome del file <br>
-  <mark>Return: </mark> nominativo
+  <mark>Return:</mark> nominativo
   </p>
   
   
@@ -120,23 +127,50 @@
   <h3 id="getEmail">getEmail</h3>
   <img src="/Buste-Paga-Sender-Docs/Screen/getemail.png">
   <p>
-
+    Prende come parametro il nominativo di una persona, carica in una Map composta dalla chave il nome e il valore l'email tutte le informazioni che vengono presi da un file CSV online<br>Il CSV sarà composto nel seguente formato:
+    <blockquote>
+      Nome e Cognome;email@dominio.com<br>
+      Nome e Cognome;email@dominio.com<br>
+      Nome e Cognome;email@dominio.com<br>
+    </blockquote>
+    Scompatta e inserisce nella Map tutte le infoemazioni ritorna l'email dato il nome. 
 
   <br><br>
   <mark>Paramentri:</mark> nominativo <br>
-  <mark>Return: </mark> email
+  <mark>Return:</mark> email
   </p>
 
   <h3 id="getAllEmail">getAllEmail</h3>
   <img src="/Buste-Paga-Sender-Docs/Screen/getallemail.png">
   <p>
-  
+    Carica in una Map composta dalla chave il nome e il valore l'email tutte le informazioni che vengono presi da un file CSV online<br>Il CSV sarà composto nel seguente formato:
+    <blockquote>
+      Nome e Cognome;email@dominio.com<br>
+      Nome e Cognome;email@dominio.com<br>
+      Nome e Cognome;email@dominio.com<br>
+    </blockquote>
+    Ritorna la Map con tutte le informazioni
+
+
   <br><br>
   <mark>Paramentri:</mark> // <br>
-  <mark>Return: </mark> map con chiave il nome e il valore l'email
+  <mark>Return:</mark> map con chiave il nome e il valore l'email
   </p>
 
 </article>
+
+
+
+<article>
+  <h1 id="main">Main</h1>
+  <h3 id="creacartella">Crea Cartella</h3>
+  <img src="/Buste-Paga-Sender-Docs/Screen/inviate.png">
+  <p>
+    Crea una cartella "Inviate" dove andranno spostati tutti i documenti inviati, avvisa in console se non è stato possibile effettuare l'operazione. 
+  </p>
+</article>
+
+
 
 
 <!-- <article>
@@ -147,7 +181,7 @@
     
   <br><br>
   <mark>Paramentri:</mark>  <br>
-  <mark>Return: </mark> 
+  <mark>Return:</mark> 
   </p>
 </article> -->
 
