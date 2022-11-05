@@ -1,0 +1,178 @@
+<head>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Buste Paga Sender | Docs</title>
+
+
+  <link rel="stylesheet" href="/assets/style.css">
+
+
+
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+
+</head>
+
+<header>
+  <nav>
+
+    <a href="/">Home</a>
+
+    <a href="#">Docs</a>
+
+    <a href="">Scarica</a>
+
+    <a href="https://github.com/IsD4n73"><svg class="icon" viewBox="0 0 32 32">
+        <path
+          d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z">
+        </path>
+      </svg>Github</a>
+
+  </nav>
+
+  <h1>Documentazione</h1>
+  <p>Spiegazione Codice</p>
+</header>
+
+
+
+<main>
+      <fieldset>
+        <legend>Tabella Contenuti</legend>
+      
+      
+        <ul>
+          <li><a href="#fileutils"><b>FileUtils</a></b>
+            <ul>
+              <li><a href="#getFileName">getFileName</a></li>
+              <li><a href="#getOggettoMail">getOggettoMail</a></li>
+              <li><a href="#getNominativo">getNominativo</a></li>
+              <li><a href="#getEmail">getEmail</a></li>
+              <li><a href="#getAllEmail">getAllEmail</a></li>
+            </ul>
+            
+          <li><a href="#main"><b>Main</a></b>
+
+          <li><a href="#gui"><b>GUI</a></b>
+            
+          <li><a href="#impostazionigui"><b>ImpostazioniGUI</a></b>
+
+          <li><a href="#sendmail"><b>SendMail</a></b>
+        </ul>
+
+      </fieldset>
+    
+
+
+<article>
+      <h1 id="fileutils">FileUtils</h1>
+
+
+      <h3 id="getFileName">getFileName</h3>
+      <img src="/Screen/getfilename.png">
+      <p>
+        Il metodo prende come parametro il percorso della cartella da cui prendere i file<br>
+        Crea una lista in cui andranno inseriri tutti i nomi dei file, effettua un for per tutti i file presenti nel percorso dato. Se l'oggetto attuale è una cartella possiamo esaminare i file contententi al suo interno richiamando il metodo.<br>
+        Altrimenti controlla se il file attuale è un PDF, se lo è aggiungiamo alla lista prima creata il file e stampiamo in console / in un log (textarea) il file che è stato aggiunto. Alla fine del ciclo ritorna la lista dei file.<br>
+        <br>
+        <mark>Parametri:</mark> percorso cartella da cui prendere i file <br>
+        <mark>Return:</mark> una lista di stringhe contenente tutti i file trovati
+      </p>
+
+
+
+
+      <h3 id="getOggettoMail">getOggettoMail</h3>
+      <img src="/Screen/getoggetto.png">
+      <p>
+        Prende come parametro il nome di un file e lo spezza ad ogni <b>-</b> <br>Il formato del nome è:
+        <blockquote>
+          1 - Gennaio 2022 - Nome e Cognome.pdf
+        </blockquote>
+        Ritorna il secondo argomento (Gennaio 2022) e aggiunge "Busta Paga:"<br><br>
+        <mark>Paramentri:</mark> nome del file <br>
+        <mark>Return: </mark> oggetto della mail
+      </p>
+
+
+
+
+  <h3 id="getNominativo">getNominativo</h3>
+  <img src="/Screen/getnome.png">
+  <p>
+
+
+
+  <br><br>
+  <mark>Paramentri:</mark> nome del file <br>
+  <mark>Return: </mark> nominativo
+  </p>
+  
+  
+
+  <h3 id="getEmail">getEmail</h3>
+  <img src="/Screen/getemail.png">
+  <p>
+
+
+  <br><br>
+  <mark>Paramentri:</mark> nominativo <br>
+  <mark>Return: </mark> email
+  </p>
+
+  <h3 id="getAllEmail">getAllEmail</h3>
+  <img src="/Screen/getallemail.png">
+  <p>
+  
+  <br><br>
+  <mark>Paramentri:</mark> // <br>
+  <mark>Return: </mark> map con chiave il nome e il valore l'email
+  </p>
+
+</article>
+
+
+<!-- <article>
+  <h1 id="">Titolo</h1>
+  <h3 id="metodo">metodo</h3>
+  <img src="">
+  <p>
+    
+  <br><br>
+  <mark>Paramentri:</mark>  <br>
+  <mark>Return: </mark> 
+  </p>
+</article> -->
+
+
+   
+</main>
+    <footer>
+      <small>© 2022 3EM Engineering</small>
+    </footer>
+          
+          
+          
+          
+          
+          
+          
+
+<script>
+  $('a[href^="#"]').click(function (e) {
+    e.preventDefault();
+    $(window).stop(true).scrollTo(this.hash, { duration: 500, interrupt: false });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag-commonmark.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+  integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
