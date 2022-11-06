@@ -66,11 +66,19 @@
           <li><a href="#gui"><b>GUI</a></b>
             <ul>
               <li><a href="#bottoneActionPerformed">Invia Buste Paga - Bottone</a></li>
+              <li><a href="#saveLogActionPerformed">Salva Log - Bottone</a></li>
+              <li><a href="#scaricaGuidaActionPerformed">Scarica Guida - Bottone Menu</a></li>
             </ul>
             
           <li><a href="#impostazionigui"><b>ImpostazioniGUI</a></b>
+            <ul>
+              <li><a href="#salvaActionPerformed">Salva Credenziali - Bottone</a></li>
+            </ul>
 
           <li><a href="#sendmail"><b>SendMail</a></b>
+            <ul>
+              <li><a href="#"></a></li>
+            </ul>
         </ul>
 
       </fieldset>
@@ -191,18 +199,46 @@
     Se non ci sono stati errori sposta il file nella cartella "Inviate", controlla se ci sono stati degli errori generali e mostra la scritta del programma terminato
   
   </p>
+
+
+
+  <h3 id="saveLogActionPerformed">saveLogActionPerformed</h3>
+  <img src="/Buste-Paga-Sender-Docs/Screen/salvaLog.png">
+  <p>
+    Il metodo racchude tutto il log in una varibile e se la lunghezza del contenuto è maggiore di 0 va a creare un nuovo file e salvare il log al suo interno.<br>
+    Il nome del file sarà salvato con il seguente formato:
+    <blockquote>
+      log-dd-MM-yyyy_HH.mm.ss.txt
+    </blockquote>
+  </p>
+
+
+
+  <h3 id="scaricaGuidaActionPerformed">scaricaGuidaActionPerformed</h3>
+  <img src="/Buste-Paga-Sender-Docs/Screen/scaricaGuida.png">
+  <p>
+    Il metodo apre una pagina web (il pdf della guida) nel browser predefinito e scarica il pdf o nel caso in cui sia leggibile online apre il PDF.
+  </p>
 </article>
 
 
 <article>
   <h1 id="impostazionigui">ImpostazioniGUI</h1>
-  <h3 id="metodo">metodo</h3>
-  <img src="/Buste-Paga-Sender-Docs/">
   <p>
-    
-  
+    La classe effettua tutti i preparativi dell'interfaccia grafica
+  </p>
+
+  <h3 id="salvaActionPerformed">salvaActionPerformed</h3>
+  <img src="/Buste-Paga-Sender-Docs/Screen/salvaCredenziali.png">
+  <p>
+    Il metodo prende dal campo email e password i calori e li salva in un file <b>bp3em.properties</b><br>
+    Il file verrà salvato nella cartella APPDATA. 
   </p>
 </article>
+
+
+
+
 
 
 <!-- <article>
