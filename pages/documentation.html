@@ -64,6 +64,9 @@
             </ul>
 
           <li><a href="#gui"><b>GUI</a></b>
+            <ul>
+              <li><a href="#bottoneActionPerformed">Invia Buste Paga - Bottone</a></li>
+            </ul>
             
           <li><a href="#impostazionigui"><b>ImpostazioniGUI</a></b>
 
@@ -176,11 +179,16 @@
 
 <article>
   <h1 id="gui">GUI</h1>
-
-  <h3 id="metodo">metodo</h3>
-  <img src="/Buste-Paga-Sender-Docs/">
   <p>
-    
+    Il costruttore va a creare e posizionare tutti gli oggetti dell'interfaccia grafica e ne setta le proprietà come colore, posizione, font, icona ecc.
+  </p>
+
+  <h3 id="bottoneActionPerformed">bottoneActionPerformed</h3>
+  <img src="/Buste-Paga-Sender-Docs/Screen/inviaBP.png">
+  <p>
+    Il metodo effettua alcune azioni preliminari come impostare la barra di progresso a 0 e il bottone non cliccabile, va a caricare i file in una List ed imposta il valore massimo della barra di progresso al numero dei file.<br>
+    Effettua un ciclo in cui per ogni file va a prendere il nome, l'oggetto e l'email ed invia la mail.<br>
+    Se non ci sono stati errori sposta il file nella cartella "Inviate", controlla se ci sono stati degli errori generali e mostra la scritta del programma terminato
   
   </p>
 </article>
