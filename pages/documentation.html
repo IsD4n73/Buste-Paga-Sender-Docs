@@ -20,14 +20,14 @@
 
 </head>
 
-<header>
+<header id="top">
   <nav>
 
     <a href="/Buste-Paga-Sender-Docs/">Home</a>
 
     <a href="#">Docs</a>
 
-    <a href="">Scarica</a>
+    <a href="https://github.com/domenicolubrano/BP/releases">Scarica</a>
 
     <a href="https://github.com/IsD4n73"><svg class="icon" viewBox="0 0 32 32">
         <path
@@ -77,7 +77,8 @@
 
           <li><a href="#sendmail"><b>SendMail</a></b>
             <ul>
-              <li><a href="#"></a></li>
+              <li><a href="#send">Send</a></li>
+              <li><a href="#setcredenziali">Set Credenziali</a></li>
             </ul>
         </ul>
 
@@ -236,7 +237,31 @@
   </p>
 </article>
 
+<article>
+  <h1 id="sendmail">SendMail</h1>
+  <h3 id="send">Send</h3>
+  <p>
+    Il metodo si occupa di mandare la mail al dato destinatario con l'oggettoe e il file allegato.<br>
+    Svolge le seguenti operazioni:<br><br>
+    1 - imposta le proprietà dell'server SMTP<br>
+    2 - effettua il login con le credenziali<br>
+    3 - imposta il mittente<br>
+    4 - imposta il destinatario<br>
+    5 - imposta l'oggetto della mail<br>
+    6 - imposta il corpo della mail<br>
+    7 - allega il file<br>
+    8 - invia il messaggio 
+  <br><br>
+  <mark>Paramentri:</mark> destinatario, oggetto, allegato
+  </p>
 
+
+  <h3 id="setcredenziali">setCredenziali</h3>
+  <img src="/Buste-Paga-Sender-Docs/Screen/setCredenziali.png">
+  <p>
+    Il metodo carica dal file <b>bp3em.properties</b> l'email e la password precedentemente salvati ed imposta le variabili per il login dell'account del mittente con quei valori.
+  </p>
+</article>
 
 
 
@@ -253,12 +278,19 @@
   </p>
 </article> -->
 
+<article style="text-align: center;">
+  <a href="#top"><button>Torna all'inizio</button></a>
+</article>
 
    
 </main>
-    <footer>
-      <small>© 2022 3EM Engineering</small>
-    </footer>
+
+
+
+
+<footer>
+  <small>© 2022 3EM Engineering</small>    
+</footer>
           
           
           
